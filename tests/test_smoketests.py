@@ -15,9 +15,9 @@ from selenium.webdriver.common.desired_capabilities import DesiredCapabilities
 class TestSmoketests():
   def setup_method(self, method):
     options = Options()
-    options.set_capability("browserName", "firefox")
+    
     options.add_argument("--headless")
-    self.driver = webdriver.Firefox(options=options)
+    self.driver = webdriver.Chrome(options=options)
     self.vars = {}
   
   def teardown_method(self, method):
