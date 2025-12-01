@@ -11,14 +11,13 @@ from selenium.webdriver.support import expected_conditions
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.desired_capabilities import DesiredCapabilities
-service = Service("C:\\Users\\Nvani\\Downloads\\geckodriver-v0.36.0-win64\\geckodriver.exe")
 
 class TestSmoketests():
   def setup_method(self, method):
     options = Options()
     options.set_capability("browserName", "firefox")
     options.add_argument("--headless=new")
-    self.driver = webdriver.Firefox(options=options, service=service)
+    self.driver = webdriver.Firefox(options=options)
     self.vars = {}
   
   def teardown_method(self, method):
