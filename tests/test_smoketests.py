@@ -17,7 +17,7 @@ class TestSmoketests():
   def setup_method(self, method):
     options = Options()
     options.set_capability("browserName", "firefox")
-    options.add_argument("--headless")
+    options.add_argument("--headless=new")
     self.driver = webdriver.Firefox(options=options, service=service)
     self.vars = {}
   
